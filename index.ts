@@ -6,6 +6,7 @@ const client = createClient({
 });
 
 const resultSet = await client.execute("select * from todos");
+console.log("index.ts : resultSet =", resultSet);
 const { columns, rows } = resultSet;
 for (const row of rows) {
   console.log("---");
