@@ -1,7 +1,7 @@
 import { createClient } from "@libsql/client";
 
 const client = createClient({
-  url: "libsql://todos-mvolkmann.turso.io",
+  url: Bun.env.TURSO_URL as string,
   authToken: Bun.env.TURSO_TOKEN,
 });
 
